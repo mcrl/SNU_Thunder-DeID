@@ -22,7 +22,6 @@ cd mecab-0.996-ko-0.9.2/
 make
 make install
 
-
 # install mecab-ko-dictionary
 wget https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.1.1-20180720.tar.gz
 tar zxvf mecab-ko-dic-2.1.1-20180720.tar.gz
@@ -33,7 +32,6 @@ make
 make install
 
 pip install mecab-python3 konlpy
-
 
 # clone this repository
 cd ~
@@ -53,7 +51,6 @@ pip install .
 
 # return to SNU_Thunder-DeID directory
 cd ../..
-
 ```
 
 2. Run inference:
