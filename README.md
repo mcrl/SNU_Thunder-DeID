@@ -31,6 +31,8 @@ make install
 
 pip install mecab-python3 konlpy
 
+
+cd ~
 git clone https://github.com/mcrl/SNU_Thunder-DeID
 
 conda create -n snu_thunder_deid python=3.13 -y
