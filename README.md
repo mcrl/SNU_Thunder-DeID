@@ -11,14 +11,6 @@ It detects named entities at the token level and replaces them with anonymized p
 1. Install required packages:
 
 ```bash
-git clone https://github.com/mcrl/SNU_Thunder-DeID
-
-conda create -n snu_thunder_deid python=3.13 -y
-conda activate snu_thunder_deid
-
-pip3 install torch torchvision torchaudio
-pip3 install transformers datasets pandas
-
 cd ~
 mkdir mecab
 
@@ -38,6 +30,19 @@ make
 make install
 
 pip install mecab-python3 konlpy
+
+git clone https://github.com/mcrl/SNU_Thunder-DeID
+
+conda create -n snu_thunder_deid python=3.13 -y
+conda activate snu_thunder_deid
+
+pip3 install torch torchvision torchaudio
+pip3 install transformers datasets pandas
+
+cd ./SNU_Thunder-DeID/tokenizer/mecab_bpe
+pip install .
+cd ../..
+
 ```
 
 2. Run inference:
