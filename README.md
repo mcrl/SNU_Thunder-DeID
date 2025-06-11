@@ -11,6 +11,7 @@ It detects named entities at the token level and replaces them with anonymized p
 1. Install required packages:
 
 ```bash
+# install mecab-ko tokenizer
 cd ~
 mkdir mecab
 
@@ -21,6 +22,8 @@ cd mecab-0.996-ko-0.9.2/
 make
 make install
 
+
+# install mecab-ko-dictionary
 wget https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.1.1-20180720.tar.gz
 tar zxvf mecab-ko-dic-2.1.1-20180720.tar.gz
 cd mecab-ko-dic-2.1.1-20180720/
@@ -32,17 +35,23 @@ make install
 pip install mecab-python3 konlpy
 
 
+# clone this repository
 cd ~
 git clone https://github.com/mcrl/SNU_Thunder-DeID
 
+# create new environment
 conda create -n snu_thunder_deid python=3.13 -y
 conda activate snu_thunder_deid
 
+# install required packages
 pip3 install torch torchvision torchaudio
 pip3 install transformers datasets pandas
 
+# install package for our custom tokenizer (mecab-ko + bpe)
 cd ./SNU_Thunder-DeID/tokenizer/mecab_bpe
 pip install .
+
+# return to SNU_Thunder-DeID directory
 cd ../..
 
 ```
