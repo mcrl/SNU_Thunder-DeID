@@ -93,3 +93,15 @@ python inference.py --print_output
     – Entity span and label mappings for full supervision dataset generation
 
 ---
+
+
+## 🧪 Citation
+
+If you use this repository or the associated models/datasets, please cite the following:
+
+to be updated
+
+
+## 📬 Contact
+
+If you have any questions, issues, or collaboration inquiries, please contact: [snullm@aces.snu.ac.kr](mailto:snullm@aces.snu.ac.kr)
