@@ -1,6 +1,6 @@
-# SNU_Thunder-DeID
+# SNU Thunder-DeID
 
-**SNU_Thunder-DeID** is a de-identification project that includes models, high-quality datasets, and an inference tool for Named Entity Recognition (NER)-based anonymization of Korean court judgments.  
+**SNU Thunder-DeID** is a de-identification project that includes models, high-quality datasets, and an inference tool for Named Entity Recognition (NER)-based anonymization of Korean court judgments.  
 **This repository** provides a standalone inference tool that runs SNU_Thunder-DeID models on raw text inputs.  
 It detects named entities at the token level and replaces them with anonymized placeholders (e.g., A, B, ...) to ensure consistency across mentions.
 
