@@ -95,9 +95,9 @@ python inference.py --print_output
   - [SNU_Thunder-DeID-1.5B](https://huggingface.co/thunder-research-group/SNU_Thunder-DeID-1.5B)
 
 - 📚 **Training Datasets**:
-  - [snu_deid_annotated_text](https://huggingface.co/datasets/thunder-research-group/snu_deid_annotated_text)  
+  - [snu_deid_annotated_court judgments](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-annotated_court_judgments)  
     – NER-annotated court judgment data with placeholders
-  - [snu_deid_entity_mentions](https://huggingface.co/datasets/thunder-research-group/snu_deid_entity_mentions)  
+  - [snu_deid_list of entity_mentions](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-list_of_entity_mentions)  
     – Entity span and label mappings for full supervision dataset generation
 
 ---
