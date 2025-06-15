@@ -2,7 +2,7 @@
 
 **SNU Thunder-DeID** is a de-identification project that includes models, high-quality datasets, and an inference tool for Named Entity Recognition (NER)-based anonymization of Korean court judgments.  
 This repository provides a **standalone inference tool** that runs **[SNU Thunder-DeID models](https://huggingface.co/thunder-research-group/SNU_Thunder-DeID-1.5B)** on raw text inputs, detecting named entities at the token level and replacing them with anonymized placeholders (e.g., A, B, ...) to ensure consistency across mentions.
-It also includes **training dataset generation scripts** that combines [Annotated court judgments](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-annotated_court_judgments) with [Entity mention list](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-entity_mention_list) to construct training data for NER model development.
+It also includes **training dataset generation scripts** that combines **[Annotated court judgments](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-annotated_court_judgments)** dataset with **[Entity mention list](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-entity_mention_list)** dataset to construct training dataset for court judgment de-identification model development.
 
 ---
 
