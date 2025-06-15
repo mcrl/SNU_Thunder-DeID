@@ -52,8 +52,6 @@ cd ../..
 ```
 
 ## How to Use : Inference
-2. Run inference:
-
 ```bash
 python inference.py \
   --model_size 340M \
@@ -73,8 +71,6 @@ python inference.py --print_output
 ---
 
 ## How to Use : Training dataset generation
-2. Run inference:
-
 ```bash
 python gen_dataset.py \
   --seed 1203 \
