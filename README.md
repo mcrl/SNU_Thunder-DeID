@@ -102,7 +102,7 @@ python gen_dataset.py \
 
 - **Training Datasets**:
   - [SNU Thunder-DeID Annotated_court judgments](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-annotated_court_judgments)  
-    – NER-annotated court judgment data with placeholders
+    – NER-annotated court judgment text data with placeholders
   - [SNU Thunder-DeID_Entity mention list](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-entity_mention_list)  
     – Entity span and label mappings for full supervision dataset generation
 
