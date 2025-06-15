@@ -93,7 +93,6 @@ python gen_dataset.py \
 ### Output
 <div style="background:#f8f8f8; padding:1em; border-radius:6px; font-family:monospace; white-space:pre-wrap;">
 피고인 <u>A</u>은 <u>B</u>대학원 박사과정에 재학 중이며, 같은 연구실 소속 <u>C</u>, <u>D</u>와 함께 AI 모델 비식별화와 관련된 연구를 진행 중이다. 그는 해당 기술이 이미 여러 공공기관 및 대기업으로부터 상용화 제안을 받고 있다고 허위로 주장하며, 커뮤니티 사이트 ‘<u>E</u>’에 “비식별화 기술 투자자 모집”이라는 제목의 글을 게시하였다. 해당 글에는 “이미 검증된 알고리즘, 선점 투자 시 지분 우선 배정”, “특허 수익 배분 예정” 등의 문구와 함께 자신 명의의 <u>F</u> 계좌 (<u>G</u>)를 기재하고, 1인당 10만 원의 초기 투자금을 요구하였다. 이에 따라 <u>A</u>은 <u>I</u>, <u>J</u>, <u>K</u>, <u>L</u>, <u>M</u> 등 5명으로부터 총 50만 원을 송금받아 편취하였다.
-
 <br><br>
 (The defendant, <u>A</u>, is a Ph.D. student at the <u>B</u>, conducting research on AI-based de-identification models together with <u>C</u> and <u>D</u>, who belong to the same lab. He falsely claimed that the technology had already received commercialization offers from several public institutions and major companies, and posted a message titled “Recruiting Investors for De-identification Technology” on the online community site <u>E</u>. The post included statements such as “Algorithm already verified, priority equity allocation for early investors,” and “Patent profit sharing planned,” along with his personal <u>F</u> account number (<u>G</u>), requesting an initial investment of 100,000 KRW per person. As a result, <u>A</u> fraudulently received a total of 500,000 KRW from five individuals: <u>I</u>, <u>J</u>, <u>K</u>, <u>L</u>, and <u>M</u>.)
 </div>
