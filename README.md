@@ -1,7 +1,7 @@
 # SNU Thunder-DeID
 
 **SNU Thunder-DeID** is a de-identification project that includes models, high-quality datasets, and an inference tool for Named Entity Recognition (NER)-based anonymization of Korean court judgments.  
-This repository provides a **standalone inference tool** that runs **SNU Thunder-DeID models** on raw text inputs, detecting named entities at the token level and replacing them with anonymized placeholders (e.g., A, B, ...) to ensure consistency across mentions.
+This repository provides a **standalone inference tool** that runs **[SNU Thunder-DeID models](https://huggingface.co/thunder-research-group/SNU_Thunder-DeID-1.5B)** on raw text inputs, detecting named entities at the token level and replacing them with anonymized placeholders (e.g., A, B, ...) to ensure consistency across mentions.
 It also includes **training dataset generation scripts** that combines [Annotated court judgments](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-annotated_court_judgments) with [Entity mention list](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-entity_mention_list) to construct training data for NER model development.
 
 ---
@@ -57,7 +57,7 @@ python inference.py \
   --model_size 340M \
   --device cuda \
   --input_type text \
-  --input "피고인 이규성은 서울대학교 데이터사이언스대학원에 박사과정으로 재학 중인 대학원생이며..." \
+  --input "피고인 이규성은 서울대학교 데이터사이언스대학원 박사과정에 재학 중이며..." \
   --output_file ./output.csv \
   --print_output
 ```
@@ -101,9 +101,9 @@ python gen_dataset.py \
   - [SNU_Thunder-DeID-1.5B](https://huggingface.co/thunder-research-group/SNU_Thunder-DeID-1.5B)
 
 - **Training Datasets**:
-  - [snu_deid_annotated_court judgments](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-annotated_court_judgments)  
+  - [SNU Thunder-DeID Annotated_court judgments](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-annotated_court_judgments)  
     – NER-annotated court judgment data with placeholders
-  - [snu_deid_list of entity_mentions](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-list_of_entity_mentions)  
+  - [SNU Thunder-DeID_Entity mention list](https://huggingface.co/datasets/thunder-research-group/SNU_Thunder-DeID-entity_mention_list)  
     – Entity span and label mappings for full supervision dataset generation
 
 ---
