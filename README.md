@@ -6,9 +6,7 @@ It detects named entities at the token level and replaces them with anonymized p
 
 ---
 
-## How to use
-
-1. Install required packages:
+## Installation 
 
 ```bash
 # install mecab-ko tokenizer
@@ -53,6 +51,7 @@ pip install .
 cd ../..
 ```
 
+## How to Use : Inference
 2. Run inference:
 
 ```bash
@@ -72,6 +71,18 @@ python inference.py --print_output
 ```
 
 ---
+
+## How to Use : Training dataset generation
+2. Run inference:
+
+```bash
+python gen_dataset.py \
+  --seed 1203 \
+  --num_replica 30
+```
+
+---
+
 
 ## Example
 
