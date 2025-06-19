@@ -52,7 +52,7 @@ pip install .
 cd ../..
 ```
 
-## How to Use : Inference
+## How to use : Inference
 ```bash
 python inference.py \
   --model_size 340M \
@@ -85,7 +85,7 @@ python inference.py --print_output
 
 ---
 
-## How to Use : Training dataset generation
+## How to use : Training dataset generation
 ```bash
 python gen_dataset.py \
   --seed 1203 \
@@ -94,7 +94,7 @@ python gen_dataset.py \
 
 ---
 
-## 🔗 Related Resources
+## Related resources
 
 - **Models**:
   - [SNU_Thunder-DeID-340M](https://huggingface.co/thunder-research-group/SNU_Thunder-DeID-340M)
@@ -125,7 +125,7 @@ Unless otherwise stated, this repository is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].  
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
 
-### Attribution Notice
+### Attribution notice
 
 This dataset includes or is derived from content originally published in the  
 [`lbox-open`](https://huggingface.co/datasets/lbox/lbox-open) dataset,  
