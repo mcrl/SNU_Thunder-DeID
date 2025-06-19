@@ -35,9 +35,9 @@ def main():
         args.device = "cpu"    
     
     if args.model_size == "1.5B":
-        tokenizer_path = "/home/s2/kslee/erc/research/deid/SNU_Thunder-DeID/tokenizer/default_tokenizers/mecab_bpe_deid_32k"
-    else:
         tokenizer_path = "/home/s2/kslee/erc/research/deid/SNU_Thunder-DeID/tokenizer/default_tokenizers/mecab_bpe_deid_128k"
+    else:
+        tokenizer_path = "/home/s2/kslee/erc/research/deid/SNU_Thunder-DeID/tokenizer/default_tokenizers/mecab_bpe_deid_32k"
     
     tokenizer = PreTrainedTokenizerFast.from_pretrained(tokenizer_path)
     tokenizer = custom.switch_dummy(tokenizer)
