@@ -36,7 +36,7 @@ def main():
         args.device = "cpu"    
     
     tokenizer = PreTrainedTokenizerFast.from_pretrained(
-        repo_name,
+        f"https://huggingface.co/thunder-research-group/SNU_Thunder-DeID-{args.model_size}",
         trust_remode_code=True,
     )
     tokenizer = custom.switch_dummy(tokenizer)
