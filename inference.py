@@ -34,14 +34,16 @@ def main():
         print("Cuda device is not available: CPU inference")
         args.device = "cpu"    
     
-    tokenizer = PreTrainedTokenizerFast.from_pretrained(
-        f"https://huggingface.co/thunder-research-group/SNU_Thunder-DeID-{args.model_size}",
-        trust_remode_code=True,
-    )
+    if args.model_size == "1.5B":
+        tokenizer_path = "/home/s2/kslee/erc/research/deid/SNU_Thunder-DeID/tokenizer/default_tokenizers/mecab_bpe_deid_32k"
+    else:
+        tokenizer_path = "/home/s2/kslee/erc/research/deid/SNU_Thunder-DeID/tokenizer/default_tokenizers/mecab_bpe_deid_128k"
+    
+    tokenizer = PreTrainedTokenizerFast.from_pretrained(tokenizer_path)
     tokenizer = custom.switch_dummy(tokenizer)
     
     model = AutoModelForTokenClassification.from_pretrained(
-        f"https://huggingface.co/thunder-research-group/SNU_Thunder-DeID-{args.model_size}",,
+        f"thunder-research-group/SNU_Thunder-DeID-{args.model_size}",
         trust_remote_code=True,
     ).to(args.device)
     
