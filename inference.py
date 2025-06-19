@@ -82,7 +82,7 @@ def main():
             args.batch_size = len(model_outputs)
 
         cur_input = model_inputs[idx:idx+args.batch_size].to(args.device)
-        attention_mask = (cur_input != tokenizer.pad_token_id).long().cuda()
+        attention_mask = (cur_input != tokenizer.pad_token_id).long().to(args.device)
         
         with torch.no_grad():
             logits = model(cur_input, attention_mask=attention_mask).logits
