@@ -29,20 +29,19 @@ def main():
     parser.add_argument("--num_replica", default=30, type=int)
     parser.add_argument("--seed", default=1203, type=int)
     args = parser.parse_args()
-    repo_name = f"Gyuseong/test{args.model_size}"
 
     if not torch.cuda.is_available():
         print("Cuda device is not available: CPU inference")
         args.device = "cpu"    
     
     tokenizer = PreTrainedTokenizerFast.from_pretrained(
-        repo_name,
+        f"https://huggingface.co/thunder-research-group/SNU_Thunder-DeID-{args.model_size}",
         trust_remode_code=True,
     )
     tokenizer = custom.switch_dummy(tokenizer)
     
     model = AutoModelForTokenClassification.from_pretrained(
-        repo_name,
+        f"https://huggingface.co/thunder-research-group/SNU_Thunder-DeID-{args.model_size}",,
         trust_remote_code=True,
     ).to(args.device)
     
