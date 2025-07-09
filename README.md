@@ -30,8 +30,6 @@ cd mecab-ko-dic-2.1.1-20180720/
 make
 make install
 
-
-
 # clone this repository
 cd ~
 git clone https://github.com/mcrl/SNU_Thunder-DeID
