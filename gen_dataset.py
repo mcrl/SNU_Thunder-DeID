@@ -11,7 +11,7 @@ def main():
     parser.add_argument("--seed", default=1203, type=int)
     parser.add_argument("--num_replica", default=30, type=int)
     parser.add_argument("--vocab_size", default=32000, type=int)
-    parser.add_argument("--tokenizer_path", default="./tokenizer/default_tokenizers/mecab_bpe_deid_32k")
+    parser.add_argument("--tokenizer_path", default="./tokenizer/default_tokenizers")
 
     parser.add_argument("--raw_dataset_dir", 
                         default="./datasets/0_raw_documents")
@@ -28,13 +28,10 @@ def main():
                         default=f"./tokenizer")
     args = parser.parse_args()    
 
-
-
     def get_all_json_keys(dataset_root):
         directory = f"{dataset_root}/1_replacement/subset"
-        all_keys = set()  # Using a set to avoid duplicate keys
+        all_keys = set() 
         
-        # Walk through directory and subdirectories
         for root, _, files in os.walk(directory):
             for filename in files:
                 if filename.endswith('.json') and filename != 'all_categories.json':
@@ -42,7 +39,6 @@ def main():
                     try:
                         with open(file_path, 'r') as f:
                             data = json.load(f)
-                            # Assuming JSON contains a dictionary at the root
                             all_keys.update(data.keys())
                     except (json.JSONDecodeError, IOError) as e:
                         print(f"Error reading {file_path}: {e}")
@@ -74,12 +70,12 @@ def main():
     all_labels = sorted(set(replace_labels + generated_labels + choice_labels + ['O']))
     print(f"[INFO] number of all labels : {len(all_labels)}")
 
-
     # load tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(args.tokenizer_path, trust_remote_code=True)
+    vocab_size_str = f"{int(args.vocab_size/1000)}"
+    default_tokenizer_path = f"{args.tokenizer_path}/mecab_bpe_deid_{vocab_size_str}k"
+    tokenizer = AutoTokenizer.from_pretrained(default_tokenizer_path, trust_remote_code=True)
 
     # save directory
-    vocab_size_str = f"{int(args.vocab_size/1000)}"
     dataset_path = f"{args.dataset_save_root}/{vocab_size_str}k-n{args.num_replica}-seed{args.seed}"
     modified_tokenizer_path = f"{args.modified_tokenizer_save_root}/modified-tokenizer-{vocab_size_str}k"
 
