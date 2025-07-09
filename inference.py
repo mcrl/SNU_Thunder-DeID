@@ -140,11 +140,12 @@ def main():
         deidentified.append(cur_document)
 
 
-    deidentified = [tokenizer.decode(doc, skip_special_tokens=True, clean_up_tokenization_spaces=True) for doc in deidentified][0]
-    deidentified = fix_josa_with_entity_dict(text=post_process_fix_spacing(clean_repeated_alphabets(adjust_spacing(deidentified))), 
-                                             entity_dict=entity_dict)
+    deidentified = [tokenizer.decode(doc, skip_special_tokens=True, clean_up_tokenization_spaces=True) for doc in deidentified]
+    deidentified = [fix_josa_with_entity_dict(
+        text=post_process_fix_spacing(clean_repeated_alphabets(adjust_spacing(deidentified_doc))), 
+        entity_dict=entity_dict)
+        for deidentified_doc in deidentified]
 
-    
     # output files
     output_file = pd.DataFrame(deidentified)
     output_file.to_csv(args.output_file, index=False, encoding="cp949")
