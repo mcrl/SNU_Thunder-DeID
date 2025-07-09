@@ -30,7 +30,7 @@ cd mecab-ko-dic-2.1.1-20180720/
 make
 make install
 
-pip install mecab-python3 konlpy
+
 
 # clone this repository
 cd ~
@@ -43,6 +43,7 @@ conda activate snu_thunder_deid
 # install required packages
 pip3 install torch torchvision torchaudio
 pip3 install transformers datasets pandas
+pip install mecab-python3 konlpy
 
 # install package for our custom tokenizer (mecab-ko + bpe)
 cd ./SNU_Thunder-DeID/tokenizer/mecab_bpe
