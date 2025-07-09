@@ -1604,7 +1604,7 @@ def process_sample(
     cur_row["filename"] = filename
     cur_row["replace_link"] = replace_link
     cur_row["processed"] = processed
-    cur_row["filename"] = filename
+    cur_row["category"] = category
     
     # generate/select entities for replacements
     output_dict = get_entities(
