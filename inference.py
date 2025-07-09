@@ -90,8 +90,10 @@ def main():
         model_outputs += pred_labels
 
 
-    # de-identify input data using model outputs
+    # de-identification
     deidentified = []
+    all_seen_alphabets = set()
+
     for document_idx in range(len(model_inputs)):
         seen_alphabets = set()
         entity_begins = False
@@ -100,61 +102,47 @@ def main():
         entity_dict = dict()
         current_entity_tok = []
         current_entity_pos = []
-        for pos_idx, (tok, pred_tok) in enumerate(zip(model_inputs[document_idx], model_outputs[document_idx])):
 
+        for pos_idx, (tok, pred_tok) in enumerate(zip(model_inputs[document_idx], model_outputs[document_idx])):
+            # 1 : entity 아님. 'O' 라벨
             if pred_tok == 1:
                 entity_begins = False
-
                 if len(current_entity_tok) > 0:
-                    # entity -> tokens to text
-                    cur_entity = adjust_spacing(
-                            tokenizer.decode(current_entity_tok)).lstrip().rstrip()
-                    entity_exists = False
-
-                    for key in entity_dict.keys(): # alphabet
+                    cur_entity = adjust_spacing(tokenizer.decode(current_entity_tok)).strip()
+                    for key in entity_dict.keys():
                         if entity_dict[key]["entity"] == cur_entity:
-                            # same entity
                             for pos in current_entity_pos:
-                                cur_document[pos] = tokenizer.convert_tokens_to_ids(key) # same alphabet
-                            entity_exists = True
+                                cur_document[pos] = tokenizer.convert_tokens_to_ids(key)
                             break
-                    
-                    if not entity_exists:
-                        entity_dict[alphabet] = dict()
-                        entity_dict[alphabet]["tokens"] = current_entity_tok
-                        entity_dict[alphabet]["entity"] = cur_entity
-                        # entity_dict[alphabet]["label"] = current_label
-
+                    else:
+                        alphabet = get_next_alphabet(seen_alphabets)
+                        seen_alphabets.add(alphabet)
+                        all_seen_alphabets.add(alphabet)
+                        
+                        next_width = 15
+                        next_tok = cur_document[pos_idx:pos_idx+next_width] if pos_idx + next_width < len(cur_document)-1 else cur_document[pos_idx:]                            
+                        next_chars = adjust_spacing(tokenizer.decode(next_tok))
+                        
+                        entity_dict[alphabet] = {"entity": cur_entity, "next_chars":next_chars, "josa_adjusted":False}
                         for pos in current_entity_pos:
                             cur_document[pos] = tokenizer.convert_tokens_to_ids(alphabet)
-
-                    # reset
+                    current_entity_tok = []
+                    current_entity_pos = []
+            else:
+                if not entity_begins:
+                    entity_begins = True
                     current_entity_tok = []
                     current_entity_pos = []
 
-            else:
-                if entity_begins == False:
-                    alphabet = get_next_alphabet(seen_alphabets)
-                    seen_alphabets.add(alphabet)
-                    entity_begins = True
-                    # current_label = tokenizer.id2label[pred_tok]
-
-                current_entity_pos.append(pos_idx)
                 current_entity_tok.append(tok)
-        
+                current_entity_pos.append(pos_idx)
 
         deidentified.append(cur_document)
 
-    deidentified = [tokenizer.decode(
-        doc, 
-        skip_special_tokens=True,
-        clean_up_tokenization_spaces=True
-    ) for doc in deidentified]
-    deidentified = [
-        post_process_fix_spacing(
-            clean_repeated_alphabets(
-                adjust_spacing(doc)))
-                        for doc in deidentified]
+
+    deidentified = [tokenizer.decode(doc, skip_special_tokens=True, clean_up_tokenization_spaces=True) for doc in deidentified][0]
+    deidentified = fix_josa_with_entity_dict(text=post_process_fix_spacing(clean_repeated_alphabets(adjust_spacing(deidentified))), 
+                                             entity_dict=entity_dict)
 
     
     # output files
@@ -208,6 +196,41 @@ def post_process_fix_spacing(text):
     text = re.sub(r"\s+([\'\"\)\]\}\’\”])", r"\1", text)
     return text
 
+def fix_josa_with_entity_dict(text, entity_dict):
+    batchim_alphabets = ["L", "M", "N", "R"]  
+
+    josa_type_A = {'은':'는', '이':'가', '을':'를'} 
+    josa_type_B = {'는':'은', '가':'이', '를':'을'} 
+    all_josa = list(josa_type_A.keys()) + list(josa_type_B.keys())
+
+    for alphabet, value in entity_dict.items():
+        next_chars = value.get("next_chars", "")
+        if not next_chars:
+            continue
+
+        next_josa = next_chars[0]  
+        if next_josa not in all_josa:
+            continue
+        if value.get("josa_adjusted", False):
+            continue
+
+        replace_from = f"{alphabet}{next_josa}"
+
+        if alphabet[-1] in batchim_alphabets:
+            if next_josa in josa_type_B:
+                replace_to = f"{alphabet}{josa_type_B[next_josa]}"
+            else:
+                continue
+        else:
+            if next_josa in josa_type_A:
+                replace_to = f"{alphabet}{josa_type_A[next_josa]}"
+            else:
+                continue
+
+        text = text.replace(replace_from, replace_to, 1)
+        value["josa_adjusted"] = True
+
+    return text
 
 if __name__ == "__main__":
     main()
