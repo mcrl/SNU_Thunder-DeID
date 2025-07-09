@@ -5,17 +5,23 @@ import re
 import random
 import copy
 import difflib
+import math
 from tqdm import tqdm
 from itertools import groupby
+from functools import partial
 import pickle
-from joblib import Parallel, delayed
-from concurrent.futures import ProcessPoolExecutor
+from joblib import Parallel, delayed, parallel_backend
+import multiprocessing as mp
 
 from transformers import AddedToken
 
 # private
 from . import generator
 import custom
+
+
+        
+    
 
 def preprocessing(raw, replace_map, filename="for_debugging"):
     def replace_tag_in_document(document, tag_from, tag_to):
@@ -510,8 +516,6 @@ def generate_dataset_with_modified_tokenizer(
     ):
         
 
-
-
     PROVINCE = [
         '서울특별시', 
         '인천광역시', '부산광역시', '대구광역시', 
@@ -603,14 +607,12 @@ def generate_dataset_with_modified_tokenizer(
             for labels in labels:
                 all_labels.add(labels)
     
-            
     # add special tokens to tokenizer
     all_labels = sorted(all_labels)
     special_tokens = []
     special_tokens += [AddedToken(f"<<<{label}>>>", lstrip=False, rstrip=False, single_word=False, normalized=True, special=True) for label in all_labels]
     special_tokens += [AddedToken(f"<<</{label}>>>", lstrip=False, rstrip=False, single_word=False, normalized=True, special=True) for label in all_labels]
     
-    # special_tokens += [AddedToken(f"<<<NEWLINE>>>", lstrip=False, rstrip=False, single_word=False, normalized=True, special=True)]
     tokenizer.add_special_tokens({"additional_special_tokens":special_tokens})
     special_token_set = set(tokenizer.additional_special_tokens)
     
@@ -624,18 +626,12 @@ def generate_dataset_with_modified_tokenizer(
 
     cnt = 0
     for sample_idx, sample in tqdm(enumerate(samples), total=len(samples), ncols=80):
-        # # DEBUG
-        # if sample_idx < 240:
-        #     continue
-        # # DEBUG
 
         filename = sample["filename"]
         replace_link = sample["replace_link"]
         processed = sample["processed"]
 
         category = sample["category"]
-        # if category != "fraud": # DEBUG
-        #     continue 
         
         # n 개의 replaced replica 생성
         samples[sample_idx]["replaced"] = dict()
@@ -698,6 +694,16 @@ def generate_dataset_with_modified_tokenizer(
                         entity_mentions=entity_mentions,
                         filename=sample["filename"]
                     )
+                    
+                    if (
+                        replace_to.endswith("읍읍") 
+                        or replace_to.endswith("면면") 
+                        or replace_to.endswith("동동") 
+                        or replace_to.endswith("리리") 
+                        or replace_to.endswith("시시") 
+                        or replace_to.endswith("도도") 
+                        ):
+                        replace_to = replace_to[:-1]
                     
                 # (6) 전화번호 / 휴대폰번호
                 elif label in ["전화번호", "휴대폰번호"]:
@@ -787,6 +793,7 @@ def generate_dataset_with_modified_tokenizer(
                         "도소매및유통",
                         root_path=replace_subset_dataset_dir))])
                 
+                
                 elif label in ["기업명", "주식회사", "유한회사"]:
                     label = "기업명"
                     replace_to = random.choice(entity_mentions[random.choice(["기업명", "주식회사"])])
@@ -839,13 +846,11 @@ def generate_dataset_with_modified_tokenizer(
                     replace_to = random.choice(entity_mentions[label])
                 
                 
-                
                 # (11) 조직
                 elif "정비조합" in label: # 주택재개발정비조합...
                     replace_to = random.choice(entity_mentions[
                         random.choice(["재개발정비조합", "재건축정비조합"])
                     ])
-                
 
                 elif label in entity_mentions.keys():
                     replace_to = random.choice(entity_mentions[label])
@@ -889,9 +894,7 @@ def generate_dataset_with_modified_tokenizer(
                         ]
                         label = random.choice(candid)
                         replace_to = random.choice(entity_mentions[label])
-                          
-                    # label = random.choice(candid)
-                    # replace_to = random.choice(entity_mentions[label])
+                                                  
                 
                 if replace_to is not None:
                     # handling white space and josa
@@ -902,15 +905,6 @@ def generate_dataset_with_modified_tokenizer(
                         leading_whitespace = True
                     else:
                         leading_whitespace = False
-
-                    # # josa
-                    # replace_from_length = len(replace_from)
-                    # trailing_josa = get_trailing_josa(processed, replace_target_text_idx, replace_from_length)
-
-                    # # encoding target (text - )
-                    # encoding_target = replace_to + trailing_josa # '' when replace_to has no josa
-                    # if leading_whitespace:
-                    #     encoding_target = ' ' + encoding_target
 
                     encoding_target = replace_to
                     if leading_whitespace:
@@ -953,17 +947,14 @@ def generate_dataset_with_modified_tokenizer(
                 replace_from_str = ','.join(replace_from_str)
 
                 # preparation
-                # replace_from_quotation_str = None
                 replace_from_str_whitespace = None
 
                 if leading_whitespace:
-                    # replace_from_quotation_str = str(tokenizer.convert_tokens_to_ids('" ')) + ',' + replace_from_str
                     replace_from_str_whitespace = str(tokenizer.convert_tokens_to_ids(' ')) + ',' + replace_from_str
                 
                 # replacement
                 replaced = copy.deepcopy(X_str)
                 if leading_whitespace: 
-                    # replaced = replaced.replace(replace_from_quotation_str, replace_to_str)
                     replaced = replaced.replace(replace_from_str_whitespace, replace_to_str)
 
                 replaced = replaced.replace(replace_from_str, replace_to_str)
@@ -976,54 +967,6 @@ def generate_dataset_with_modified_tokenizer(
             decoded = tokenizer.decode(X)
             adjusted = adjust_spacing(decoded)
 
-            # # DEBUG
-            # print()
-            # print(adjusted)
-
-            # cnt += 1
-            # if cnt > 3:
-            #     exit()
-            # else:
-            #     continue
-            # # DEBUG
-
-            # DEBUG
-            # text
-            if max(X) > len(tokenizer):
-                print()
-                print(adjusted)
-                print()
-                print(X)
-                print()
-                print(origin_tokenized)
-                print()
-                print(sample_idx, replica_idx)
-                exit()
-
-
-            if "<<<" in adjusted:
-                print()
-                print(adjusted)
-                print(tokenizer.encode(adjusted))
-                print(X)
-                print(tokenizer.encode('피해자를 상대로 "<<<호텔>>>E<<</호텔>>>에 가자."'))
-                print(tokenizer.encode("<<<호텔>>>E<<</호텔>>>"))
-                print(tokenizer.decode( [11522, 32568, 57, 33149]))
-                print(sample_idx, replica_idx)
-                exit()
-
-            # FOR FUTURE WORK ! (enhanced tokenizer)
-            # infer_encoded = tokenizer.encode(adjusted)
-            # infer_decoded = tokenizer.decode(infer_encoded)
-            # infer_adjusted = adjust_spacing(infer_decoded)
-            # print(adjusted)
-            # print()
-            # print(infer_adjusted)
-            # print()
-            # print(X)
-            # print()
-            # print(infer_encoded)
-            # print(X == infer_encoded)
 
             Y = ['O' for _ in range(len(X))]
             for i_idx, item in enumerate(replaced_tokens):
@@ -1068,3 +1011,641 @@ def generate_dataset_with_modified_tokenizer(
     return samples, tokenizer
         
 
+
+def parallel_generate_dataset_with_modified_tokenizer(
+    # inputs
+    tokenizer,
+    seed=1203,
+    num_replica=30,
+    raw_dataset_dir="./datasets/0_raw_documents",
+    replace_subset_dataset_dir="./datasets/1_replacement/subset",
+    replace_addr_dataset_dir="./datasets/1_replacement/address",
+    replace_map_path=f"./datasets/replace_map.json",
+    
+    # output
+    dataset_path=f"./datasets/2_deid_dataset/.pkl",
+    modified_tokenizer_path=f"./datasets/2_deid_dataset/.pkl",
+    
+    # misc.
+    num_cpus=16,
+    ):
+        
+
+    PROVINCE = [
+        '서울특별시', 
+        '인천광역시', '부산광역시', '대구광역시', 
+        '대전광역시', '광주광역시', '울산광역시', 
+        '세종특별자치시', 
+        '경기도', 
+        '강원도', '강원특별자치도', 
+        '충청북도', '충청남도', 
+        '경상북도', '경상남도', 
+        '전라북도', '전북특별자치도', 
+        '전라남도', 
+        '제주특별자치도'
+    ]
+    random.seed(seed)    
+    
+    
+    """ 1. raw documents """
+    raw_documents = {
+        "indecent_act_by_compulsion":sorted(glob.glob(f"{raw_dataset_dir}/indecent_act_by_compulsion/*.md")),
+        "crime_of_violence":sorted(glob.glob(f"{raw_dataset_dir}/crime_of_violence/*.md")),
+        "fraud":sorted(glob.glob(f"{raw_dataset_dir}/fraud/*.md")),
+    }
+    
+    
+    """ 2. lists for replacement """
+    entity_mentions = dict()
+    rep_subset_files = get_json_filenames(replace_subset_dataset_dir)
+    for filename in rep_subset_files:
+        with open(filename, 'r') as fr:
+            data = json.load(fr)
+        entity_mentions.update(data)
+    
+    # addr
+    with open(f"{replace_addr_dataset_dir}/REPLACEMENT_LIST-addrs1.json", 'r') as fr1:
+        data = json.load(fr1)
+        data = {key:value for key, value in data.items()
+                     if key in PROVINCE}
+        entity_mentions["지번주소"] = data
+        for province in PROVINCE:
+            if province.endswith("시"):
+                entity_mentions["지번주소"][province] = {k:v for k,v in entity_mentions["지번주소"][province].items()
+                                              if k.endswith("구")
+                                              or k.endswith("군")}
+                
+    with open(f"{replace_addr_dataset_dir}/REPLACEMENT_LIST-addrs2.json", 'r') as fr2:
+        data = json.load(fr2)
+        data = {key:value for key, value in data.items()
+                     if key in PROVINCE}
+        entity_mentions["도로명주소"] = data
+        for province in PROVINCE:
+            if province.endswith("시"):
+                entity_mentions["도로명주소"][province] = {k:v for k,v in entity_mentions["도로명주소"][province].items()
+                                              if k.endswith("구")
+                                              or k.endswith("군")}
+        
+    """ 3. for processing (replace map) """
+    with open(replace_map_path, 'r') as fr:
+        replace_map = json.load(fr)
+
+        
+    """ samples """
+    samples = list()
+    
+    """ preprocessing """            
+    all_labels = set()
+    
+    
+    # prepare subcategories
+    sub_categories = dict()
+    sub_categories["매장"] = get_sub_categories(
+        "도소매및유통", root_path=replace_subset_dataset_dir)
+    sub_categories["사업체"] = (
+        get_sub_categories("도소매및유통", root_path=replace_subset_dataset_dir)
+        + get_sub_categories("서비스일반", root_path=replace_subset_dataset_dir)
+        + get_sub_categories("오락및스포츠", root_path=replace_subset_dataset_dir)
+        + get_sub_categories("외식업", root_path=replace_subset_dataset_dir)
+        + get_sub_categories("유흥업", root_path=replace_subset_dataset_dir)
+    )
+    sub_categories["작업실"] = get_sub_categories(
+        "제조업", root_path=replace_subset_dataset_dir)
+    sub_categories["사회복지시설"] = get_sub_categories(
+        "사회복지시설", root_path=replace_subset_dataset_dir
+    )
+
+    # 추행장소
+    sub_categories["추행장소"] = list()
+    for p in ["외식업", "유흥업", "서비스일반", "숙박업"]:
+        sub_categories["추행장소"] += get_sub_categories(p, root_path=replace_subset_dataset_dir)
+    sub_categories["추행장소"] += ["마사지", "안마시술소", "안마원", "왁싱샵"]
+    
+    # 폭행장소
+    sub_categories["폭행장소"] = list()
+    for p in ["외식업", "유흥업", "서비스일반"]:
+        sub_categories["폭행장소"] += get_sub_categories(p, root_path=replace_subset_dataset_dir)
+    sub_categories["폭행장소"] += [
+        "공원", "산책로", 
+        "교차로", "길", "골목", "도로", "사거리",
+        "아파트", "빌라", "오피스텔", "고시원", "고급주택", "맨션", "주상복합"
+    ]
+    
+    # 사기장소
+    sub_categories["사기장소"] = list()
+    for p in ["외식업", "유흥업", "서비스일반", 
+              "부동산중개및임대매매", "건설", "도소매및유통"]:
+        sub_categories["사기장소"] += get_sub_categories(p, root_path=replace_subset_dataset_dir)
+        
+    sample_idx = 0
+    for category in raw_documents.keys():        
+        for filename in raw_documents[category]:
+        # for f_idx, filename in enumerate(raw_documents[category]):
+            # read raw document
+            with open(filename, 'r') as fr:
+                raw = fr.read()
+                                
+            # preprocess raw document
+            processed, labels, alphabets = preprocessing(
+                raw, 
+                replace_map=replace_map,
+                filename=filename
+            )
+            replace_link = [(a, l) for a, l in zip(alphabets, labels)]
+                            
+            samples.append({
+                "raw":raw,
+                "sample_idx":sample_idx,
+                "processed":processed,
+                "replace_link":replace_link,
+                "filename":filename, # TODO : remove or modify this
+                "category":category
+            })
+            for labels in labels:
+                all_labels.add(labels)
+                
+            sample_idx += 1
+            
+    samples.sort(key=lambda x:x["sample_idx"])
+
+    # add special tokens to tokenizer
+    all_labels = sorted(all_labels)
+    special_tokens = []
+    special_tokens += [AddedToken(f"<<<{label}>>>", lstrip=False, rstrip=False, single_word=False, normalized=True, special=True) for label in all_labels]
+    special_tokens += [AddedToken(f"<<</{label}>>>", lstrip=False, rstrip=False, single_word=False, normalized=True, special=True) for label in all_labels]
+    
+    tokenizer.add_special_tokens({"additional_special_tokens":special_tokens})
+    special_token_set = set(tokenizer.additional_special_tokens)
+    
+    # save the modified tokenizer    
+    tokenizer.save_pretrained(modified_tokenizer_path)
+    
+    # switch to mecab-bpe mode (can't be serialized)
+    # tokenizer = custom.switch_dummy(tokenizer)
+    # switch_tokenizer()
+
+    # DEBUG
+    if False:
+        final_samples = []
+        for sample in tqdm(samples, ncols=80):
+            final_samples.append(
+                process_sample(
+                    sample,
+                    tokenizer,
+                    entity_mentions,
+                    sub_categories,
+                    num_replica,
+                    seed
+                )   
+            )
+    # DEBUG
+            
+    chunk_size = math.ceil(len(samples) / num_cpus)
+    chunks = [samples[i:i + chunk_size] for i in range(0, len(samples), chunk_size)]
+
+    partial_chunk_fn = partial(
+        process_chunk,
+        tokenizer=tokenizer,
+        entity_mentions=entity_mentions,
+        sub_categories=sub_categories,
+        num_replica=num_replica,
+        seed=seed
+    )
+
+    final_samples = []
+
+    with mp.Pool(processes=num_cpus) as pool:
+        with tqdm(total=len(samples), ncols=80) as pbar:
+            for chunk_result in pool.imap_unordered(partial_chunk_fn, chunks):
+                final_samples.extend(chunk_result)
+                pbar.update(len(chunk_result))
+                
+    final_samples.sort(key=lambda x: x['filename'])
+    
+    
+    # 데이터셋 저장
+    with open(dataset_path, 'wb') as fwb:
+        pickle.dump(final_samples, fwb)        
+        
+    return final_samples, tokenizer
+        
+
+def get_entities(
+    tokenizer,
+    entity_mentions,
+    sub_categories,
+    replace_link,
+    processed,
+    category,
+    num_replica,
+    seed,
+    filename=None, # for debugging
+):
+    output_dict = dict()
+    for replica_idx in range(num_replica):
+        output_dict[replica_idx] = dict()
+        output_dict[replica_idx]["replaced_tokens"] = list()
+    
+    for replica_idx in range(num_replica):
+        random.seed(seed+replica_idx)
+        
+        # replace 된 라벨들 담아놓는 리스트
+        replaced_tokens = list()
+        
+        # 원본 tokenized
+        tokenized = tokenizer.encode(processed)
+        
+        origin_tokenized = copy.deepcopy(tokenized)
+        
+        # 모든 라벨에 대해 replacement 실행
+        for label_idx, (alphabet, label) in enumerate(replace_link):
+                            
+            # 교체 대상
+            replace_from = f"<<<{label}>>>{alphabet}<<</{label}>>>"
+            replace_from_tokenized = tokenizer.encode(replace_from)
+            replace_to = None
+                            
+            # 비식별화 해야되는 부분
+            # (1) 이름
+            if label == "내국인이름":
+                replace_to = generator.korean_name(processed, alphabet)
+            
+            elif label == "외국인이름":
+                replace_to = random.choice(entity_mentions[random.choice([
+                    "일본인이름","중국인이름","태국인이름","베트남이름","필리핀이름","몽골인이름",
+                    "캄보디아이름",
+                    "영어이름"
+                ])])
+            
+            # (2) 주민등록번호
+            elif label == "주민등록번호":
+                replace_to = generator.resident_number()
+                
+            # (3) 계좌번호
+            elif label == "계좌번호":
+                replace_to = generator.account_numbers()
+            
+            # (4) 나이, 출생연도
+            elif label == "나이":
+                label = "연령정보"
+                replace_to = str(random.choice(list(range(18, 75))))
+                
+            elif label == "출생연도":
+                label = "연령정보"
+                replace_to = str(random.choice(list(range(1950, 2005))))
+            
+            # (5) 주소
+            elif "아래주소" in label or label == "주소":
+                replace_to = generator.address(
+                    processed=processed,
+                    label=label, alphabet=alphabet,
+                    entity_mentions=entity_mentions,
+                    filename=filename,
+                )
+                
+                if (
+                    replace_to.endswith("읍읍") 
+                    or replace_to.endswith("면면") 
+                    or replace_to.endswith("동동") 
+                    or replace_to.endswith("리리") 
+                    or replace_to.endswith("시시") 
+                    or replace_to.endswith("도도") 
+                    ):
+                    replace_to = replace_to[:-1]
+                
+            # (6) 전화번호 / 휴대폰번호
+            elif label in ["전화번호", "휴대폰번호"]:
+                replace_to = generator.phone_numbers(label)
+            
+            # (7) 숫자/알파벳 정보  
+            elif label == "신용카드번호":
+                replace_to = generator.card_numbers()
+            
+            elif label == "동":
+                if random.random() < 0.5:
+                    candid = [i+1 for i in range(10)]
+                    replace_to = str(random.choice(candid))
+                    if random.random() < 0.1:
+                        additional = ['A', 'B', 'C', 'D']
+                        replace_to = replace_to + random.choice(additional)
+                else:
+                    candid = [(i+1)*100 + j for i in range(22) for j in range(0, 10)]
+                    replace_to = str(random.choice(candid))
+                    
+            elif label in ["수용동", "수용실"]:
+                replace_to = str(random.choice(list(range(1, 10))))
+                    
+            elif label in ["호", "실", "호실", "객실",
+                    "출구", "출구번호",
+                    "진료실", "생활관",
+                    "룸","승강장","번", "번호", '방',
+                    '호', "호실", "객실번호", "실",
+                    "출구번호", "탑승장번호", "승강장번호", 
+                    "버스번호", "광역버스", "노선번호",
+                    "호선",
+                    "층",
+                    '명수']:
+                replace_to = generator.bun_numbers(processed, label, alphabet)
+                
+            elif label == "레일":
+                replace_to = random.choice(["A", "B", "C", "D", "E", "F"])
+            
+            elif label == "열차번호":
+                replace_to = generator.train_numbers()
+                
+            elif label in ["차량번호", "택시", "화물차"]:
+                replace_to = generator.car_numbers()
+            
+            elif label in ["버스", "버스번호"]:
+                label = "버스번호"
+                replace_to = generator.bus_numbers()
+                
+            elif label in ["승차장"]:
+                replace_to = str(random.choice(list(range(1, 41))))
+                
+            elif label == "연도":
+                replace_to = str(random.choice(list(range(1960, 2025))))
+                
+            
+            # (8) 위치기준
+            elif label == "위치기준":                    
+                candidates = []
+                # TODO
+                for low_category in ["빌딩", "버스정류장", 
+                                        "한식당", "중식당", "일식당", "분식점", "고깃집", "동남아음식점",
+                                        "휴대전화대리점", "커피", "주점", 
+                                        "기업명",
+                                        "금융기관", "은행", "복합시설", "상가", "시장", "아울렛",
+                                        "경찰서", "아파트", "편의점", "주유소", "마트"]:
+                    candidates += entity_mentions[low_category]
+                
+                replace_to = random.choice(candidates)
+                
+            elif label == "소재":
+                label = '행정동' # TODO : 행정군, 행정리, 찾기
+                replace_to = random.choice(entity_mentions[label])
+                    
+            # (9) 사업체 random choice
+            elif label in ["음식점", "식당", "프랜차이즈식당", "외식업"]:
+                # new label
+                label = random.choice(["한식당", "중식당", "일식당", "분식점", "고깃집", "동남아음식점"])
+                replace_to = random.choice(entity_mentions[label])
+                
+            elif label in ["식품업체"]:
+                replace_to = random.choice(entity_mentions[random.choice(["식품회사", "식품가공업", "식품유통업"])])
+            
+            elif label in ["매장", "매장이름","가게", "점포", "매점", "노점상", "노점"]:
+                # new label
+                label = "매장"
+                replace_to = random.choice(entity_mentions[random.choice(sub_categories["매장"])])
+            
+            elif label in ["기업명", "주식회사", "유한회사"]:
+                label = "기업명"
+                replace_to = random.choice(entity_mentions[random.choice(["기업명", "주식회사"])])
+            
+                
+            elif label in ["사무실", "사무소"]:
+                replace_to = random.choice(entity_mentions[random.choice(
+                    ["공인중개사", "법률사무소", "기업명", "주식회사"])])
+            
+            elif label in ["사업체", "사업체일반"]:
+                label = "사업체"
+                replace_to = random.choice(entity_mentions[random.choice(
+                    sub_categories["사업체"]
+                )])
+                
+            elif label in ["작업실"]:
+                replace_to = random.choice(entity_mentions[random.choice(
+                    sub_categories["작업실"]
+                )])
+                
+            elif label == "지부":
+                replace_to = random.choice(entity_mentions["지점"])
+                if replace_to.endswith("지점"):
+                    replace_to = replace_to[:-2] + "지부"
+                else:
+                    replacec_to = replace_to[:-1] + "지부"
+                
+            # (10) 시설및기관
+            elif label in ["사회복지법인산하기관"]:
+                label = "사회복지시설"
+                replace_to = random.choice(entity_mentions[random.choice(sub_categories["사회복지시설"])])
+                
+            elif label in ["센터"]:
+                label = random.choice(["스포츠센터", "주민센터", "안전센터", "치안센터"])
+                replace_to = random.choice(entity_mentions[label])
+            
+            elif label =="중고등학교":
+                label = random.choice(["중학교", "고등학교"])
+                replace_to = random.choice(entity_mentions[label])
+            
+            elif label =="학교":
+                label = random.choice(["초등학교", "중학교", "고등학교", "대학교"])
+                replace_to = random.choice(entity_mentions[label])
+            
+            
+            # (11) 조직
+            elif "정비조합" in label: # 주택재개발정비조합...
+                replace_to = random.choice(entity_mentions[
+                    random.choice(["재개발정비조합", "재건축정비조합"])
+                ])
+
+            elif label in entity_mentions.keys():
+                replace_to = random.choice(entity_mentions[label])
+            
+            elif label == "추행장소":
+                label = random.choice(sub_categories["추행장소"])
+                replace_to = random.choice(entity_mentions[label])
+            elif label == "폭행장소":
+                label = random.choice(sub_categories["폭행장소"])
+                replace_to = random.choice(entity_mentions[label])
+            elif label == "사기장소":
+                label = random.choice(sub_categories["사기장소"])
+                replace_to = random.choice(entity_mentions[label])
+                                            
+            
+            if replace_to is not None:
+                # handling white space and josa
+                replace_target_text_idx = processed.find(replace_from)
+                
+                # leading white space
+                if has_leading_whitespace(processed, replace_target_text_idx):
+                    leading_whitespace = True
+                else:
+                    leading_whitespace = False
+
+                encoding_target = replace_to
+                if leading_whitespace:
+                    encoding_target = ' ' + encoding_target
+
+                replace_to_tokenized = tokenizer.encode(encoding_target)
+
+                output_dict[replica_idx]["replaced_tokens"].append({
+                    "leading_whitespace":leading_whitespace,
+                    "replace_to":replace_to,
+                    "encoding_target":encoding_target,
+                    "replace_to_tokenized":replace_to_tokenized,
+                    "replace_from_tokenized":replace_from_tokenized,
+                    "replace_target_text_idx":replace_target_text_idx,
+                    "label":label
+                })
+    
+    return output_dict
+
+
+
+def get_tok_label_sequence(
+    tokenizer,
+    processed,
+    replaced_subdict,
+    num_replica,
+):
+    output_dict = dict()
+    for replica_idx in range(num_replica):
+        output_dict[replica_idx] = dict()
+
+    for replica_idx in range(num_replica):
+        # generate X, Y pairs while inserting entity tokens
+        origin_tokenized = tokenizer.encode(processed)
+        X = copy.deepcopy(origin_tokenized)  # token sequence
+        # generate X replacing entities
+        replaced_tokens = replaced_subdict[replica_idx]["replaced_tokens"]
+        
+        replaced_tokens.sort(key=lambda x: x['replace_target_text_idx'])
+        for i_idx, item in enumerate(replaced_tokens):
+            modified_X = []
+            modified_Y = []
+            label = item["label"]
+            replace_from = item["replace_from_tokenized"]
+            replace_to   = item["replace_to_tokenized"] # 조사 포함됨
+            leading_whitespace = item["leading_whitespace"]
+
+            X_str = [str(tok) for tok in X]
+            X_str = ','.join(X_str)
+
+            replace_to_str = [str(tok) for tok in replace_to]
+            replace_to_str = ','.join(replace_to_str)
+
+            replace_from_str = [str(tok) for tok in replace_from]
+            replace_from_str = ','.join(replace_from_str)
+
+            # preparation
+            replace_from_str_whitespace = None
+
+            if leading_whitespace:
+                replace_from_str_whitespace = str(tokenizer.convert_tokens_to_ids(' ')) + ',' + replace_from_str
+            
+            # replacement
+            replaced = copy.deepcopy(X_str)
+            if leading_whitespace: 
+                replaced = replaced.replace(replace_from_str_whitespace, replace_to_str)
+
+            replaced = replaced.replace(replace_from_str, replace_to_str)
+
+            replaced_split = replaced.split(',')
+            replaced_split = [int(tok) for tok in replaced_split]
+
+            X = replaced_split
+        
+        decoded = tokenizer.decode(X)
+        adjusted = adjust_spacing(decoded)
+
+        Y = ['O' for _ in range(len(X))]
+        for i_idx, item in enumerate(replaced_tokens):
+            # target string
+            target_str = item["replace_to"].lstrip().rstrip()
+
+            label = item["label"]
+            replace_from = item["replace_from_tokenized"]
+            replace_to   = item["replace_to_tokenized"] # 조사 포함됨
+            leading_whitespace = item["leading_whitespace"]
+
+            # labeling
+            x_idx = 0
+            width = len(replace_to)
+            while x_idx + width < len(X):
+                cur = X[x_idx : x_idx + width]
+                if cur == replace_to:
+                    for y_idx in range(x_idx, x_idx + width):
+                        Y[y_idx] = label
+                    x_idx = x_idx + width
+                else:
+                    x_idx = x_idx + 1 
+                  
+        output_dict[replica_idx]["decoded"] = decoded
+        output_dict[replica_idx]["adjusted"] = adjusted
+        output_dict[replica_idx]["tokens"] = X
+        output_dict[replica_idx]["labels"] = Y  
+        
+    return output_dict
+    
+    
+    
+def process_sample(
+    sample,
+    tokenizer,
+    entity_mentions,
+    sub_categories,
+    num_replica,
+    seed,
+):
+    # tokenizer = custom.switch_dummy(tokenizer)
+    
+    cur_row = dict()
+    # n 개의 replaced replica 생성
+    for replica_idx in range(num_replica):
+        cur_row[replica_idx] = dict()
+        
+    filename = sample["filename"]
+    replace_link = sample["replace_link"]
+    processed = sample["processed"]
+    category = sample["category"]
+    
+    cur_row["filename"] = filename
+    cur_row["replace_link"] = replace_link
+    cur_row["processed"] = processed
+    cur_row["filename"] = filename
+    
+    # generate/select entities for replacements
+    output_dict = get_entities(
+        tokenizer=tokenizer,
+        entity_mentions=entity_mentions,
+        sub_categories=sub_categories,
+        replace_link=replace_link, 
+        processed=processed, 
+        category=category,
+        num_replica=num_replica,
+        seed=seed,
+        filename=filename
+    )
+    for replica_idx in range(num_replica):
+        cur_row[replica_idx].update(output_dict[replica_idx])
+
+    # generate token sequence / label sequence (token ids !)
+    output_dict = get_tok_label_sequence(
+        tokenizer=tokenizer,
+        processed=processed,
+        num_replica=num_replica,
+        replaced_subdict=cur_row
+    )
+    for replica_idx in range(num_replica):
+        cur_row[replica_idx].update(output_dict[replica_idx])
+
+    return cur_row
+    
+
+
+def process_chunk(chunk, tokenizer, entity_mentions, sub_categories, num_replica, seed):
+    tokenizer = custom.switch_dummy(tokenizer)
+
+    results = []
+    for sample in chunk:
+        results.append(
+            process_sample(sample, tokenizer, entity_mentions, sub_categories, num_replica, seed)
+        )
+    return results
+
+# with parallel_backend('multiprocessing', prefer="fork"):  # 명시적 지정
+#     results = Parallel(n_jobs=8)(
+#         delayed(augment_n_times)(data) for data in original_data_list
+#     )

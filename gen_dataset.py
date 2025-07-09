@@ -3,7 +3,7 @@ import os
 import json
 from transformers import AutoTokenizer
 
-from data_generator import generate_dataset_with_modified_tokenizer
+from data_generator import parallel_generate_dataset_with_modified_tokenizer
 
 def main():
 
@@ -26,6 +26,10 @@ def main():
                         default=f"./datasets/generated")
     parser.add_argument("--modified_tokenizer_save_root", 
                         default=f"./tokenizer")
+    
+    # misc.
+    parser.add_argument("--num_cpus", default=8, type=int)
+    
     args = parser.parse_args()    
 
     def get_all_json_keys(dataset_root):
@@ -85,7 +89,7 @@ def main():
         os.makedirs(args.modified_tokenizer_save_root)   
 
     # processing
-    raw_dataset, tokenizer = generate_dataset_with_modified_tokenizer(
+    raw_dataset, tokenizer = parallel_generate_dataset_with_modified_tokenizer(
         tokenizer=tokenizer,
         seed=args.seed,
         num_replica=args.num_replica,
@@ -94,7 +98,8 @@ def main():
         replace_addr_dataset_dir=args.replace_addr_dataset_dir,
         replace_map_path=args.replace_map_path,
         dataset_path=dataset_path, # save path
-        modified_tokenizer_path=modified_tokenizer_path # save path
+        modified_tokenizer_path=modified_tokenizer_path, # save path
+        num_cpus=args.num_cpus
     )    
     return
 

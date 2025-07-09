@@ -1,0 +1,8187 @@
+{
+  "additional_special_tokens": [
+    {
+      "content": "<<<IT회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<PC방>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<SNS>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<URL>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<가구공장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<가구매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<가상화폐>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<가상화폐거래소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<가상화폐거래프로그램>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<가수>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<가스업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<가스충전소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<가요주점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<가전제품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<객실번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<건물내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<건물임대업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<건설업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<건설자재회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<게임마일리지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<게임서버>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<게임아이템>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<게임아이템거래카페>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<게임장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<경기장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<경비용역업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<경찰서>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<경찰청>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<계좌번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<고급주택>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<고등학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<고물업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<고속버스>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<고시원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<골목>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<골프연습장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<골프용품판매점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<골프장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<골프장코스>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<공공기관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<공공기관내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<공단>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<공사현장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<공연>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<공원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<공원내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<공인중개사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<공작기계>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<공장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<공제조합>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<공청회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<공항>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<과일가게>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<관광버스>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<관광지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<관리번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<광고회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<광역버스>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<광장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<교과목>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<교도소내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<교차로>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<교회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<구아래주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<구역>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<구인사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<구치소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<구치소내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<국정원비밀조직>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<국정원비밀조직정보과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<군부대>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<군아래주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<굴삭기제조회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<귀금속점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<극단>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<금광채굴업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<금괴일련번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<금속제조업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<금융기관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<금융투자상품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<금융회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<기계설비회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<기숙학원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<기업내센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<기업명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<길>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<꽃가게>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<나이>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<나이트클럽>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<낚시대회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<낚시터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<내과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<내국인이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<노동조합>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<노래방>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<노래빠>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<노래주점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<노선번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<노점상>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<노회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<농산물판매업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<농어촌근린시설>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<농업회사법인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<농장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<닉네임>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<다방>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<단과대학>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<단란주점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<단체명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<당구장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<대대>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<대리운전회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<대리점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<대부업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<대출상품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<대학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<대학교내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<대화명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<도로>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<도서관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<도아래주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<독서토론모임>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<동>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<동물병원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<동호회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<둘레길>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<등산로>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<등산행사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<떡집>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<라이브카페>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<라인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<레스토랑>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<룸살롱>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<리조트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<마사지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<마스크팩>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<마을>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<마을회관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<마트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<매매상사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<매점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<맨션>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<명수>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<모바일게임>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<모임>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<모텔>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<목공소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<목욕탕>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<몽골인이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<무역회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<무인텔>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<문>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<문구점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<문화시설>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<물류단지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<물류센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<물류센터레일>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<물류창고>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<물류회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<미군부대>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<미술관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<미술품경매사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<미용기기업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<미용실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<바>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<반>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<반찬가게>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<발전기>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<발전소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<방>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<방송국>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<방송마일리지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<방송프로그램>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<방송플랫폼>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<방역회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<배달대행업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<배달어플리케이션>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<백화점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<밴드>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<버스>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<버스공영차고지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<버스번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<버스정류장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<버스차고지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<버스터미널>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<버스회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<번역사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<범죄경력등조회회보서>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<범죄조직>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<법률사무소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<법무법인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<법무사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<법원내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<베트남이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<병원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<병원내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<보이스피싱어플리케이션>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<보일러회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<보험대리점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<보험상품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<보험회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<복지시설>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<복합기임대판매업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<복합기제조사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<복합시설>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<볼링장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<봉사단체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<봉제업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<부동산개발업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<부동산매매임대회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<부동산분양사무실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<부서>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<분식점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<분양대행사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<뷔페>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<블로그>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<비료회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<비트코인개인지갑>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<빌딩>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<빌라>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<빵집>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<사거리>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<사건번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<사기장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<사단법인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<사무소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<사무실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<사업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<사업체일반>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<사우나>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<사찰>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<사회복지법인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<사회복지법인산하기관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<산>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<산부인과의원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<산악회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<산업단지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<산장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<산책로>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<상가>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<상담소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<상인회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<상조회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<상품권판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<생활관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<생활용품매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<석유대체연료판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<석재가공업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<선거단위>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<선거캠프>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<선박명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<선박번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<선박임대판매업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<선박제조업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<선착장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<성형외과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<세례명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<세차장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<세탁소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<소개소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<소개팅어플리케이션>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<소방서>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<소재>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<소프트웨어>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<쇼핑몰>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<수영장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<수용동>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<수용실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<수표번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<슈퍼마켓>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<스튜디오>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<스포츠센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<스포츠용품점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<스포츠의류매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<승강기업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<승강장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<승강장번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<승마장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<승차장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<시아래주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<시장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<시청>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<식당>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<식품가공업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<식품업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<식품유통업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<식품회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<신경외과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<신문>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<신발판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<신용카드번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<신탁회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<실내낚시터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<아울렛>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<아이디>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<아파트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<아파트내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<악기모델명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<악기회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<안경점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<안과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<안마시술소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<안마원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<안전센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<애견샵>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<애견카페>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<약국>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<약수터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<어린이집>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<어음번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<어플>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<언론사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<업소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<여객선>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<여관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<여행사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<역>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<연구소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<연도>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<연수원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<연합회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<열차번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<영농조합법인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<영어이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<영화>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<영화관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<오디오샵>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<오락실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<오토바이수리점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<오피스텔>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<온라인게임>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<온천>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<옷가게>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<왁싱샵>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<외국도시>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<외국인이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<외식업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<요가학원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<요양병원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<요양원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<용역>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<용역회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<우체국>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<운송회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<운전면허학원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<워터파크>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<원단공급업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<원양어업회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<위치기준>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<유압벨브판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<유치원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<유통업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<유학알선업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<유한공사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<유한회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<육교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<육류업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<육아원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<은행>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<음료>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<음료회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<음식점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<읍아래주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<의료기기회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<의료법인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<의류매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<의류브랜드>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<의약품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<의원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<이동식주택>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<이메일주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<이발소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<인터넷도박>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<인터넷동성사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<인터넷설치업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<인테리어>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<일본인이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<일식당>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<일정>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<임의경매개시결정>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<임플란트세미나>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<임플란트제품명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<자동차대리점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<자동차매매상사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<자동차백화점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<자동차부품생산업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<자동차임대업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<자동차판매점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<자동차회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<자선행사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<작업실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<작업용차량>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<장례식장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<장애인이용시설>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<재개발정비사업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<재개발정비조합>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<재건축정비조합>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<재직정보제공업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<저수지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<저축은행>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<전기배터리업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<전기차충전소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<전당포>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<전시장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<전자부품제조>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<전자제품렌탈업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<전자제품매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<전화번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<점포>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<정당>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<정비공업사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<정신병원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<정육점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<정형외과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<제과점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<제조업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<조선회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<조성사업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<조합>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<종교단체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<죄>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<주류회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<주민등록번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<주민센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<주민쉼터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<주상복합>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<주식회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<주유소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<주점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<주차장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<주차장관리회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<주택>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<주행시험장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<중고거래사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<중고도서매매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<중고등학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<중고차매매단지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<중고차매매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<중고차판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<중국인이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<중식당>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<중요무형문화재>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<중학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<증권사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<지구>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<지구대>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<지부>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<지사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<지역자활기업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<지점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<지주회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<지하상가>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<지하차도>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<지하철역>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<지하철칸>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<지회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<직급>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<직업능력개발훈련시설>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<직위>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<질소발생기제조>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<찜질방>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<차량번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<차량종류>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<채팅방명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<채팅어플리케이션>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<철강제품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<철거업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<철판가공업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<철학관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<청소년수련관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<청소대행업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<체육관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<체육회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<초등학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<추행장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<축산농장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<축제>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<출구>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<출구번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<출생연도>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<출판사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<층>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<치과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<치과의원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<치안센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<치킨집>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<친환경복합단지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<카드단말기판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<카드회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<카지노>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<카페명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<캄보디아이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<캠핑업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<캠핑장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<커뮤니티사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<커피>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<컨설팅>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<컴퓨터판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<콘도>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<클럽>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<타운하우스>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<타이어판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<탑승장번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<태국인이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<태권도장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<태양광발전소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<택시>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<택시면허매매중개업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<택시회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<터널>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<토공사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<토목특허상품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<통신사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<투자회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<특허번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<팀>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<파출소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<파티룸>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<페인트판매업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<펜션>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<편의점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<포털>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<폭행장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<푸드트럭>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<풀장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<플라스틱가공업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<피어싱>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<피자>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<필리핀이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<학과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<학원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<한방병원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<한의원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<항공편>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<항구>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<해변>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<해수욕장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<해외기업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<해외메신저>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<해외식당>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<해외은행>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<해외주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<해외증권사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<해외하천>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<해외학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<행사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<행사대행업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<행정구>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<행정군>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<행정동>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<행정리>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<행정복지센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<행정시>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<행정읍>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<헌병대>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<헬스장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<협의회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<협회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<호선>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<호스트바>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<호실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<호텔>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<화물자동차>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<화물차>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<화실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<화원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<화장품회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<화학약품판매업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<회원등급>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<횟집>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<휴게소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<휴대전화대리점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<휴대폰번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<<휴대폰케이스매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</IT회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</PC방>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</SNS>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</URL>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</가구공장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</가구매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</가상화폐>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</가상화폐거래소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</가상화폐거래프로그램>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</가수>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</가스업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</가스충전소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</가요주점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</가전제품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</객실번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</건물내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</건물임대업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</건설업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</건설자재회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</게임마일리지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</게임서버>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</게임아이템>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</게임아이템거래카페>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</게임장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</경기장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</경비용역업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</경찰서>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</경찰청>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</계좌번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</고급주택>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</고등학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</고물업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</고속버스>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</고시원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</골목>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</골프연습장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</골프용품판매점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</골프장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</골프장코스>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</공공기관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</공공기관내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</공단>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</공사현장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</공연>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</공원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</공원내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</공인중개사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</공작기계>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</공장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</공제조합>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</공청회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</공항>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</과일가게>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</관광버스>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</관광지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</관리번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</광고회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</광역버스>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</광장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</교과목>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</교도소내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</교차로>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</교회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</구아래주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</구역>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</구인사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</구치소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</구치소내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</국정원비밀조직>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</국정원비밀조직정보과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</군부대>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</군아래주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</굴삭기제조회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</귀금속점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</극단>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</금광채굴업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</금괴일련번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</금속제조업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</금융기관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</금융투자상품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</금융회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</기계설비회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</기숙학원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</기업내센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</기업명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</길>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</꽃가게>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</나이>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</나이트클럽>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</낚시대회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</낚시터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</내과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</내국인이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</노동조합>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</노래방>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</노래빠>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</노래주점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</노선번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</노점상>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</노회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</농산물판매업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</농어촌근린시설>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</농업회사법인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</농장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</닉네임>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</다방>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</단과대학>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</단란주점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</단체명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</당구장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</대대>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</대리운전회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</대리점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</대부업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</대출상품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</대학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</대학교내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</대화명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</도로>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</도서관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</도아래주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</독서토론모임>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</동>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</동물병원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</동호회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</둘레길>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</등산로>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</등산행사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</떡집>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</라이브카페>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</라인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</레스토랑>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</룸살롱>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</리조트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</마사지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</마스크팩>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</마을>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</마을회관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</마트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</매매상사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</매점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</맨션>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</명수>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</모바일게임>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</모임>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</모텔>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</목공소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</목욕탕>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</몽골인이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</무역회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</무인텔>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</문>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</문구점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</문화시설>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</물류단지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</물류센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</물류센터레일>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</물류창고>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</물류회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</미군부대>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</미술관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</미술품경매사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</미용기기업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</미용실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</바>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</반>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</반찬가게>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</발전기>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</발전소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</방>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</방송국>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</방송마일리지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</방송프로그램>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</방송플랫폼>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</방역회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</배달대행업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</배달어플리케이션>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</백화점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</밴드>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</버스>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</버스공영차고지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</버스번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</버스정류장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</버스차고지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</버스터미널>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</버스회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</번역사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</범죄경력등조회회보서>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</범죄조직>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</법률사무소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</법무법인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</법무사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</법원내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</베트남이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</병원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</병원내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</보이스피싱어플리케이션>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</보일러회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</보험대리점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</보험상품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</보험회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</복지시설>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</복합기임대판매업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</복합기제조사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</복합시설>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</볼링장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</봉사단체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</봉제업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</부동산개발업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</부동산매매임대회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</부동산분양사무실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</부서>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</분식점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</분양대행사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</뷔페>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</블로그>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</비료회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</비트코인개인지갑>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</빌딩>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</빌라>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</빵집>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</사거리>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</사건번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</사기장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</사단법인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</사무소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</사무실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</사업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</사업체일반>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</사우나>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</사찰>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</사회복지법인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</사회복지법인산하기관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</산>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</산부인과의원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</산악회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</산업단지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</산장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</산책로>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</상가>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</상담소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</상인회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</상조회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</상품권판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</생활관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</생활용품매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</석유대체연료판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</석재가공업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</선거단위>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</선거캠프>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</선박명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</선박번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</선박임대판매업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</선박제조업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</선착장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</성형외과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</세례명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</세차장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</세탁소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</소개소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</소개팅어플리케이션>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</소방서>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</소재>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</소프트웨어>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</쇼핑몰>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</수영장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</수용동>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</수용실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</수표번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</슈퍼마켓>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</스튜디오>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</스포츠센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</스포츠용품점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</스포츠의류매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</승강기업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</승강장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</승강장번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</승마장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</승차장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</시아래주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</시장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</시청>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</식당>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</식품가공업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</식품업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</식품유통업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</식품회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</신경외과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</신문>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</신발판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</신용카드번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</신탁회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</실내낚시터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</아울렛>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</아이디>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</아파트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</아파트내장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</악기모델명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</악기회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</안경점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</안과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</안마시술소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</안마원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</안전센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</애견샵>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</애견카페>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</약국>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</약수터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</어린이집>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</어음번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</어플>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</언론사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</업소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</여객선>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</여관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</여행사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</역>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</연구소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</연도>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</연수원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</연합회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</열차번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</영농조합법인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</영어이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</영화>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</영화관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</오디오샵>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</오락실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</오토바이수리점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</오피스텔>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</온라인게임>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</온천>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</옷가게>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</왁싱샵>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</외국도시>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</외국인이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</외식업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</요가학원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</요양병원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</요양원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</용역>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</용역회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</우체국>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</운송회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</운전면허학원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</워터파크>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</원단공급업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</원양어업회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</위치기준>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</유압벨브판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</유치원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</유통업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</유학알선업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</유한공사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</유한회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</육교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</육류업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</육아원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</은행>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</음료>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</음료회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</음식점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</읍아래주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</의료기기회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</의료법인>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</의류매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</의류브랜드>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</의약품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</의원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</이동식주택>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</이메일주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</이발소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</인터넷도박>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</인터넷동성사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</인터넷설치업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</인테리어>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</일본인이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</일식당>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</일정>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</임의경매개시결정>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</임플란트세미나>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</임플란트제품명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</자동차대리점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</자동차매매상사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</자동차백화점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</자동차부품생산업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</자동차임대업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</자동차판매점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</자동차회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</자선행사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</작업실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</작업용차량>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</장례식장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</장애인이용시설>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</재개발정비사업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</재개발정비조합>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</재건축정비조합>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</재직정보제공업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</저수지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</저축은행>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</전기배터리업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</전기차충전소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</전당포>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</전시장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</전자부품제조>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</전자제품렌탈업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</전자제품매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</전화번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</점포>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</정당>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</정비공업사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</정신병원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</정육점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</정형외과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</제과점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</제조업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</조선회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</조성사업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</조합>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</종교단체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</죄>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</주류회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</주민등록번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</주민센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</주민쉼터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</주상복합>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</주식회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</주유소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</주점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</주차장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</주차장관리회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</주택>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</주행시험장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</중고거래사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</중고도서매매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</중고등학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</중고차매매단지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</중고차매매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</중고차판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</중국인이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</중식당>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</중요무형문화재>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</중학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</증권사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</지구>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</지구대>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</지부>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</지사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</지역자활기업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</지점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</지주회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</지하상가>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</지하차도>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</지하철역>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</지하철칸>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</지회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</직급>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</직업능력개발훈련시설>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</직위>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</질소발생기제조>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</찜질방>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</차량번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</차량종류>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</채팅방명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</채팅어플리케이션>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</철강제품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</철거업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</철판가공업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</철학관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</청소년수련관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</청소대행업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</체육관>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</체육회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</초등학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</추행장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</축산농장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</축제>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</출구>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</출구번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</출생연도>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</출판사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</층>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</치과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</치과의원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</치안센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</치킨집>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</친환경복합단지>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</카드단말기판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</카드회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</카지노>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</카페명>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</캄보디아이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</캠핑업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</캠핑장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</커뮤니티사이트>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</커피>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</컨설팅>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</컴퓨터판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</콘도>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</클럽>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</타운하우스>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</타이어판매업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</탑승장번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</태국인이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</태권도장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</태양광발전소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</택시>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</택시면허매매중개업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</택시회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</터널>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</토공사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</토목특허상품>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</통신사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</투자회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</특허번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</팀>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</파출소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</파티룸>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</페인트판매업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</펜션>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</편의점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</포털>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</폭행장소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</푸드트럭>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</풀장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</플라스틱가공업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</피어싱>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</피자>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</필리핀이름>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</학과>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</학원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</한방병원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</한의원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</항공편>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</항구>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</해변>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</해수욕장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</해외기업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</해외메신저>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</해외식당>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</해외은행>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</해외주소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</해외증권사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</해외하천>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</해외학교>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</행사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</행사대행업체>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</행정구>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</행정군>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</행정동>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</행정리>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</행정복지센터>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</행정시>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</행정읍>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</헌병대>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</헬스장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</협의회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</협회>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</호선>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</호스트바>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</호실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</호텔>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</화물자동차>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</화물차>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</화실>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</화원>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</화장품회사>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</화학약품판매업>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</회원등급>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</횟집>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</휴게소>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</휴대전화대리점>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</휴대폰번호>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "<<</휴대폰케이스매장>>>",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false
+    }
+  ],
+  "bos_token": {
+    "content": "[BOS]",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "cls_token": {
+    "content": "[CLS]",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "eos_token": {
+    "content": "[EOS]",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "mask_token": {
+    "content": "[MASK]",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "pad_token": {
+    "content": "[PAD]",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "sep_token": {
+    "content": "[SEP]",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "unk_token": {
+    "content": "[UNK]",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  }
+}
