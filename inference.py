@@ -204,6 +204,8 @@ def post_process_fix_spacing(text):
         '‘ ':'‘', ' ’':'’',
         '“ ':'“', ' ”':'”',
     }
+    for replace_from, replace_to in target_dict.items():
+        text = text.replace(replace_from, replace_to)
     
     return text
 
