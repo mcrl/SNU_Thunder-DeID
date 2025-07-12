@@ -140,11 +140,13 @@ def main():
         deidentified.append(cur_document)
 
 
-    deidentified = [tokenizer.decode(doc, skip_special_tokens=True, clean_up_tokenization_spaces=True) for doc in deidentified]
-    deidentified = [fix_josa_with_entity_dict(
-        text=post_process_fix_spacing(clean_repeated_alphabets(adjust_spacing(deidentified_doc))), 
-        entity_dict=entity_dict)
-        for deidentified_doc in deidentified]
+    deidentified = [tokenizer.decode(doc, skip_special_tokens=True, clean_up_tokenization_spaces=True) 
+                    for doc in deidentified]
+    deidentified = [adjust_spacing(d) for d in deidentified]
+    deidentified = [clean_repeated_alphabets(d) for d in deidentified]
+    deidentified = [post_process_fix_spacing(d) for d in deidentified]
+    deidentified = [fix_josa_with_entity_dict(text=d,entity_dict=entity_dict) for d in deidentified]
+    deidentified = [handling_address(d, phase="output") for d in deidentified]
 
     # output files
     output_file = pd.DataFrame(deidentified)
@@ -193,26 +195,39 @@ def clean_repeated_alphabets(text):
     return text
 
 def post_process_fix_spacing(text):
-    text = re.sub(r"([\'\"\(\[\{\‘\“])\s+([A-Za-z0-9가-힣])", r"\1\2", text)
-    text = re.sub(r"\s+([\'\"\)\]\}\’\”])", r"\1", text)
+    target_dict = {
+        '( ':'(', ' )':')',
+        '[ ':'[', ' ]':']',
+        '{ ':'{', ' }':'}',
+        '" ':'"', ' "':'"',
+        "' ":"'", " '":"'",
+        '‘ ':'‘', ' ’':'’',
+        '“ ':'“', ' ”':'”',
+    }
+    
     return text
 
-def fix_josa_with_entity_dict(text, entity_dict):
-    batchim_alphabets = ["L", "M", "N", "R"]  
 
-    josa_type_A = {'은':'는', '이':'가', '을':'를'} 
-    josa_type_B = {'는':'은', '가':'이', '를':'을'} 
-    all_josa = list(josa_type_A.keys()) + list(josa_type_B.keys())
+def fix_josa_with_entity_dict(text, entity_dict):
+    batchim_alphabets = ["L", "M", "N", "R"]  # 받침 있는 알파벳
+
+    # 받침 유무에 따라 바뀌는 조사들 + 뒤에 반드시 띄어쓰기 또는 종결을 포함
+    josa_type_A = {'이라는 ': '라는 ', '은 ': '는 ', '이 ': '가 ', '을 ': '를 ', '과 ': '와 '}
+    josa_type_B = {'라는 ': '이라는 ', '는 ': '은 ', '가 ': '이 ', '를 ': '을 ', '와 ': '과 '}
+    all_josa = sorted(set(josa_type_A.keys()) | set(josa_type_B.keys()), key=len, reverse=True)
 
     for alphabet, value in entity_dict.items():
         next_chars = value.get("next_chars", "")
-        if not next_chars:
+        if not next_chars or value.get("josa_adjusted", False):
             continue
 
-        next_josa = next_chars[0]  
-        if next_josa not in all_josa:
-            continue
-        if value.get("josa_adjusted", False):
+        next_josa = None
+        for josa in all_josa:
+            if next_chars.startswith(josa):
+                next_josa = josa
+                break
+
+        if not next_josa:
             continue
 
         replace_from = f"{alphabet}{next_josa}"
@@ -232,6 +247,84 @@ def fix_josa_with_entity_dict(text, entity_dict):
         value["josa_adjusted"] = True
 
     return text
+
+
+def handling_address(text, phase="input"):
+    target_dict = {
+        "서울특별시 ":"서울시 ",
+        "인천광역시 ":"인천시 ",
+        "부산광역시 ":"부산시 ",
+        "대구광역시 ":"대구시 ",
+        "대전광역시 ":"대전시 ",
+        "울산광역시 ":"울산시 ",
+        "광주광역시 ":"광주시 ",
+        "세종특별자치시 ":"세종시 ",
+    }
+        
+    if phase == "input":
+        for replace_from, replace_to in target_dict.items():
+            text = text.replace(replace_from, replace_to)   
+    
+    elif phase == "output":
+        for replace_to, replace_from in target_dict.items():
+            text = text.replace(replace_from, replace_to)
+    
+    return text
+            
+            
+        
+
+
+def load_local_moel(model_size, tokenizer, num_labels=595):
+    cfg = AutoConfig.from_pretrained(f"./config/models/ours-{model_size.lower().replace('.', '_')}.json")
+    cfg.max_position_embeddings = 2048
+    cfg.pad_token_id = tokenizer.pad_token_id
+    cfg.vocab_size = len(tokenizer)
+    cfg.num_labels = num_labels
+    
+    model = AutoModelForTokenClassification.from_config(cfg)
+        
+    # 상대 위치 임베딩 크기 조정
+    desired_rel_pos_size = 2048
+    current_rel_pos_size = model.deberta.encoder.rel_embeddings.weight.shape[0]
+    embedding_dim = model.deberta.encoder.rel_embeddings.weight.shape[1]
+    
+    if current_rel_pos_size != desired_rel_pos_size:
+        # 새로운 rel_embeddings 레이어 생성
+        new_rel_embeddings = torch.nn.Embedding(desired_rel_pos_size, embedding_dim)
+        with torch.no_grad():
+            # 기존 가중치 복사
+            new_rel_embeddings.weight[:current_rel_pos_size] = model.deberta.encoder.rel_embeddings.weight
+            # 새로운 위치에 대해 초기화
+            new_rel_embeddings.weight[current_rel_pos_size:] = torch.randn(
+                desired_rel_pos_size - current_rel_pos_size, embedding_dim
+            ) * 0.02  # 작은 분산으로 초기화
+        model.deberta.encoder.rel_embeddings = new_rel_embeddings
+    
+    # 모델 설정에서 max_relative_positions 업데이트
+    if hasattr(model.config, 'max_relative_positions'):
+        model.config.max_relative_positions = desired_rel_pos_size
+    
+    # 최대 시퀀스 길이 확인 및 업데이트
+    if model.config.max_position_embeddings < desired_rel_pos_size:
+        model.config.max_position_embeddings = desired_rel_pos_size
+
+
+    if model_size == "340M":
+        model_weight_path = NEW340M
+    elif model_size == "1.5B":
+        model_weight_path = NEW1_5B
+        
+    
+    model_weight = torch.load(model_weight_path,
+                            map_location="cpu",
+                            weights_only=False)["module"]
+    model.load_state_dict(model_weight, strict=False)        
+    print(f"[INFO] model weight successfully loadded from {model_weight_path}")
+    
+    return model
+
+
 
 if __name__ == "__main__":
     main()

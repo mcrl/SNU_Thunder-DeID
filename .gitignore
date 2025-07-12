@@ -1,5 +1,10 @@
+final_log/
 */__pycache__
 config/
 models/
 datasets/generated
 training.py
+output.csv
+inference_local.py
+*.sh
+snudeid.py
