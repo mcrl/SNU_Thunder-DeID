@@ -225,6 +225,7 @@ def adjust_alphabet_spacing(text):
     text = re.sub(r"('.*?')(?=\S)", r"\1 ", text)
     text = re.sub(r"([가-힣0-9\)\]\}])(?=[A-Z]{1,2})", r"\1 ", text)
     text = re.sub(r"([A-Z]{1,2})(?=[가-힣])", r"\1 ", text)
+    text = re.sub(r"([A-Z]{1,2})\s+(?=(?:에|에서|에게|으로|로|은|는|이|가|을|를|과|와)\b)", r"\1", text)
 
     return text
 
