@@ -14,6 +14,7 @@ import pickle
 
 # private
 import custom
+import processing
 
 
 def main():
@@ -60,9 +61,27 @@ def main():
         input_data = args.input
         input_data = [input_data]
 
-    # preprocessing
-    input_data = [normalize_address_names(i, phase="input") for i in input_data]    
 
+    # preprocessing
+    input_data = [processing.normalize_address_names(i, phase="input") for i in input_data]    
+    
+    protected = dict()
+    cnt = 0
+    for idx in range(len(input_data)):
+        protected, cnt = processing.protect_word(text=input_data[idx], 
+                                                 protected=protected, 
+                                                 cnt=cnt)
+        for key, origin in protected.items():
+            input_data[idx] = input_data[idx].replace(origin, key)
+        
+
+    # modify tokenizer
+    protected_tokens = []
+    for key in protected:
+        protected_tokens.append(key)
+    tokenizer.add_tokens(protected_tokens)
+    model.resize_token_embeddings(len(tokenizer), mean_resizing=True)
+    
     # model inputs
     model_inputs = [
         torch.tensor(
@@ -92,65 +111,28 @@ def main():
         pred_labels = torch.argmax(logits, dim=-1).detach().cpu().tolist()
         model_outputs += pred_labels
 
-
     # de-identification
-    deidentified = []
-    all_seen_alphabets = set()
+    deidentified, entity_dicts = processing.deidentify(
+        model=model, 
+        tokenizer=tokenizer,
+        model_inputs=model_inputs, 
+        model_outputs=model_outputs,
+        protected=protected,
+    )
 
-    for document_idx in range(len(model_inputs)):
-        seen_alphabets = set()
-        entity_begins = False
-
-        cur_document = [tok for tok in model_inputs[document_idx]]
-        entity_dict = dict()
-        current_entity_tok = []
-        current_entity_pos = []
-
-        for pos_idx, (tok, pred_tok) in enumerate(zip(model_inputs[document_idx], model_outputs[document_idx])):
-            # 1 : entity 아님. 'O' 라벨
-            if pred_tok == 1:
-                entity_begins = False
-                if len(current_entity_tok) > 0:
-                    cur_entity = adjust_spacing(tokenizer.decode(current_entity_tok)).strip()
-                    for key in entity_dict.keys():
-                        if entity_dict[key]["entity"] == cur_entity:
-                            for pos in current_entity_pos:
-                                cur_document[pos] = tokenizer.convert_tokens_to_ids(key)
-                            break
-                    else:
-                        alphabet = get_next_alphabet(seen_alphabets)
-                        seen_alphabets.add(alphabet)
-                        all_seen_alphabets.add(alphabet)
-                        
-                        next_width = 15
-                        next_tok = cur_document[pos_idx:pos_idx+next_width] if pos_idx + next_width < len(cur_document)-1 else cur_document[pos_idx:]                            
-                        next_chars = adjust_spacing(tokenizer.decode(next_tok))
-                        
-                        entity_dict[alphabet] = {"entity": cur_entity, "next_chars":next_chars, "josa_adjusted":False}
-                        for pos in current_entity_pos:
-                            cur_document[pos] = tokenizer.convert_tokens_to_ids(alphabet)
-                    current_entity_tok = []
-                    current_entity_pos = []
-            else:
-                if not entity_begins:
-                    entity_begins = True
-                    current_entity_tok = []
-                    current_entity_pos = []
-
-                current_entity_tok.append(tok)
-                current_entity_pos.append(pos_idx)
-
-        deidentified.append(cur_document)
-
-    deidentified = [tokenizer.decode(doc, skip_special_tokens=True, clean_up_tokenization_spaces=True) 
+    deidentified = [tokenizer.decode(doc, 
+                                     skip_special_tokens=True, 
+                                     clean_up_tokenization_spaces=True) 
                     for doc in deidentified]
     
     # post-processing
-    deidentified = [adjust_spacing(d) for d in deidentified]
-    deidentified = [clean_repeated_alphabets(d) for d in deidentified]
-    deidentified = [fix_josa(d) for d in deidentified]
-    deidentified = [normalize_address_names(d, phase="output") for d in deidentified]
-    deidentified = [adjust_alphabet_spacing(d) for d in deidentified]
+    deidentified = [processing.adjust_spacing(d) for d in deidentified]
+    deidentified = [processing.clean_repeated_alphabets(d) for d in deidentified]
+    deidentified = [processing.fix_josa(d) for d in deidentified]
+    deidentified = [processing.adjust_alphabet_spacing(d) for d in deidentified]
+    deidentified = [processing.normalize_address_names(d, phase="output") for d in deidentified]
+    deidentified = [processing.restore_word(d, protected, entity_dicts[i]) for i, d in enumerate(deidentified)]
+
 
     # output files
     output_file = pd.DataFrame(deidentified)
@@ -163,92 +145,6 @@ def main():
 
     return        
 
-def adjust_spacing(text):
-    text = re.sub(r' {2,}', '\x01', text)
-    text = re.sub(r' ', '\x02', text)
-    text = re.sub(r'\x01', ' ', text)
-    text = re.sub(r'\x02', '', text)
-
-    return text
-
-def get_next_alphabet(seen_alphabets):
-    if len(seen_alphabets) < 1:
-        return 'A'
-
-    for i in range(26):
-        char = chr(65 + i)  # A-Z
-        if char not in seen_alphabets:
-            return char
-    for i in range(26):
-        for j in range(26):
-
-            if i == j:
-                continue
-
-            char = chr(65 + i) + chr(65 + j)  # AA-ZZ
-            if char not in seen_alphabets:
-                return char
-
-def clean_repeated_alphabets(text):
-    text = re.sub(r'([A-Za-z]{2})\1+', r' \1', text)
-    text = re.sub(r'([A-Za-z])\1+', r' \1', text)
-    text = re.sub(r'\s+', ' ', text)
-    
-    return text
-
-def normalize_address_names(text, phase="input"):
-    target_dict = {
-        "서울특별시 ":"서울시 ",
-        "인천광역시 ":"인천시 ",
-        "부산광역시 ":"부산시 ",
-        "대구광역시 ":"대구시 ",
-        "대전광역시 ":"대전시 ",
-        "울산광역시 ":"울산시 ",
-        "광주광역시 ":"광주시 ",
-        "세종특별자치시 ":"세종시 ",
-    }
-    if phase == "input":
-        for replace_from, replace_to in target_dict.items():
-            text = text.replace(replace_from, replace_to)   
-    elif phase == "output":
-        for replace_to, replace_from in target_dict.items():
-            text = text.replace(replace_from, replace_to)
-    return text
-
-def adjust_alphabet_spacing(text):
-    text = re.sub(r"(?<=\S)(?=['\"‘\“][A-Za-z])", " ", text)
-    text = re.sub(r"([\'\"\‘\“\(\[\{])\s+([A-Z]{1,2})", r"\1\2", text)
-    text = re.sub(r"([A-Z]{1,2})\s+([\'\"\’\”\)\]\}])", r"\1\2", text)
-    chunk = r"['\"\‘\“\(\[\{][A-Z]{1,2}['\"\’\”\)\]\}]"
-    text = re.sub(rf"(?<=\S)(?={chunk})", " ", text)
-    text = re.sub(rf"({chunk})(?=\S)", r"\1 ", text)
-    text = re.sub(r"('.*?')(?=\S)", r"\1 ", text)
-    text = re.sub(r"([가-힣0-9\)\]\}])(?=[A-Z]{1,2})", r"\1 ", text)
-    text = re.sub(r"([A-Z]{1,2})(?=[가-힣])", r"\1 ", text)
-    text = re.sub(r"([A-Z]{1,2})\s+(?=(?:에|에서|에게|으로|로|은|는|이|가|을|를|과|와)\b)", r"\1", text)
-
-    return text
-
-
-def fix_josa(text):
-    batchim = set("LMNR")
-    
-    # mapping
-    no2yes  = {"을":"를","은":"는","이":"가","과":"와","이라는":"라는"}
-    yes2no  = {v:k for k,v in no2yes.items()}
-
-    josas = sorted(list(no2yes.keys()) + list(yes2no.keys()), key=len, reverse=True)
-    pat = re.compile(
-        r"([A-Z]{1,2}(?:\([^)]*\))?)"         
-        r"(" + "|".join(map(re.escape, josas)) + r")"
-    )
-    def repl(m):
-        ent, j = m.group(1), m.group(2)
-        if ent[-1] in batchim:
-            return ent + yes2no.get(j, j)
-        else:
-            return ent + no2yes.get(j, j)
-    return pat.sub(repl, text)
 
 
 if __name__ == "__main__":
