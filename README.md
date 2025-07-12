@@ -85,21 +85,13 @@ python inference.py --print_output
 
 </div>
 
-```bash
-# install mecab-ko tokenizer
-cd ~
-mkdir mecab
-
-
-
----
-
 ## How to use : Training dataset generation
 ```bash
 python gen_dataset.py \
   --seed 1203 \
   --num_replica 30
 ```
+
 
 ---
 
