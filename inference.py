@@ -5,8 +5,6 @@ import pandas as pd
 import torch
 import warnings
 warnings.filterwarnings("ignore")
-# import logging
-# logging.disable(logging.DEBUG)
 
 from transformers import AutoModelForTokenClassification, AutoTokenizer, AutoConfig, PreTrainedTokenizerFast
 from datasets import load_dataset
