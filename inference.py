@@ -5,6 +5,8 @@ import pandas as pd
 import torch
 import warnings
 warnings.filterwarnings("ignore")
+# import logging
+# logging.disable(logging.DEBUG)
 
 from transformers import AutoModelForTokenClassification, AutoTokenizer, AutoConfig, PreTrainedTokenizerFast
 from datasets import load_dataset
@@ -80,7 +82,7 @@ def main():
     for key in protected:
         protected_tokens.append(key)
     tokenizer.add_tokens(protected_tokens)
-    model.resize_token_embeddings(len(tokenizer), mean_resizing=True)
+    model.resize_token_embeddings(len(tokenizer), mean_resizing=False)
     
     # model inputs
     model_inputs = [
